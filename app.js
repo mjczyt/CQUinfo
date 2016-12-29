@@ -48,7 +48,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-app.listen(2000,"127.0.0.1",function(){
+app.listen(80,"127.0.0.1",function(){
   console.log("start");
 })
 module.exports = app;
