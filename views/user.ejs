@@ -1,0 +1,90 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CQU spider</title>
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+  
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <!-- endbuild -->
+
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="/javascripts/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
+
+<body>
+  <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <div class="container">
+    <div class="header">
+      <ul class="nav nav-pills pull-right">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <h3 class="text-muted">CQU spider</h3>
+    </div>
+
+    <div class="jumbotron">
+      <h1>Hello <img src="/images/cow.png" alt=""> ayo!</h1>
+      
+      <p class="lead"><%=name %></p>
+      <p class="lead"><%=id %></p>
+      
+      <!--<p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>-->
+    </div>
+
+    <div class="row marketing">
+      <div class="col-lg-6">
+        <h4>课表查询</h4>
+       <% for(let i=0; i<classTable.length; i++) 
+       {%>  <p><%= classTable[i] %></p>  <% } %> 
+
+        <h4>成绩查询</h4>
+      <% for(let i=0; i<grade.length; i++) 
+       {%>  <p><%= grade[i] %></p>  <% } %> 
+
+
+
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>♥ from the Jason cheng</p>
+    </div>
+  </div>
+
+ 
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/modernizr.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js scripts/plugins.js -->
+<script src="/javascripts/bootstrap.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/main.js -->
+
+<!-- endbuild -->
+</body>
+
+</html>
