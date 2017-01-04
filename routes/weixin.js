@@ -3,9 +3,18 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-if(req.query.signature=="2b572620057cb9c2a47c0639c88001c61edbf9ab"){
-  res.send(req.query.echostr);
-}else{console.log(req.query.signature);}
+
+  var signature = req.query.signature;
+  var nonce = req.query.nonce;
+  var timestamp = req.query.timestamp;
+  var echostr = req.query.echostr;
+  var temArray = [timestamp, "CQYOU", nonce].sort();
+  var tem = temArray.join('');
+  if(tem==signature){
+    res.send(echostr);
+  }else{console.log(tem)}
+
+  
 });
 
 module.exports = router;
