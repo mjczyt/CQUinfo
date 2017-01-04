@@ -1,6 +1,13 @@
 var express = require('express');
 var router = express.Router();
+var crypto = require("crypto");
 
+function sha1(str){
+  var md5sum = crypto.createHash("sha1");
+  md5sum.update(str);
+  str = md5sum.digest("hex");
+  return str;
+}
 /* GET users listing. */
 router.get('/', function (req, res, next) {
 
@@ -10,7 +17,8 @@ router.get('/', function (req, res, next) {
   var echostr = req.query.echostr;
   var temArray = [timestamp, "CQYOU", nonce].sort();
   var tem = temArray.join('');
-  if(tem==signature){
+  var scyptoString = sha1(tem);
+  if(scyptoString==signature){
     res.send(echostr);
   }else{console.log(tem)}
 
