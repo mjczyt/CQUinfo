@@ -13,9 +13,7 @@ router.post("/login", function (req, res, next) {
     var content = JSON.parse(stdout);
     res.render('user', { name: content.stuInfo.studentName, id: content.stuInfo.studentId, classTable: content.classTable, grade: content.grade });
   });
-  router.get("/weixin", function () {
-    console.log(req.param("signature"));
-  })
+  
 
 })
 
