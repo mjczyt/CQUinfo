@@ -1,19 +1,33 @@
 var express = require('express');
 var router = express.Router();
-const cmd = require("child_process").exec;
-
+var superagent = require("superagent");
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.render('index');
 
 });
-router.post("/login", function (req, res, next) {
-  console.log(req.body);
-  cmd("node login " + req.body.user + " " + req.body.password + " " + req.body.week, function (err, stdout, stderr) {
-    var content = JSON.parse(stdout);
-    res.render('user', { name: content.stuInfo.studentName, id: content.stuInfo.studentId, classTable: content.classTable, grade: content.grade });
-  });
-  
+router.post("/login", function (request, respons, next) {
+  var stdid = request.body.user;
+  var stdpwd = request.body.password;
+  var week = request.body.week;
+  superagent
+    .post('http://cqyou.top:5000/api/schedule')
+    .send({
+      "stdid": stdid,
+      "stdpwd": stdpwd,
+      "week": week
+    })
+    .set('Content-Type', 'application/json')
+    .redirects(0)
+    .accept('application/json')
+    .end(function (err, res) {
+      if (err || !res.ok) {
+        console.log('Oh no! error');
+      } else {
+        respons.render('user', { name: res.body.stuInfo.studentName, id: res.body.stuInfo.studentId, classTable: res.body.classTable, grade: res.body.grade });
+
+      }
+    });
 
 })
 
