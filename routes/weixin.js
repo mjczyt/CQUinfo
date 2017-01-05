@@ -40,7 +40,6 @@ router.post('/', function (req, res, next) {
       var contentJSON = JSON.stringify(result);
       console.log(result.xml.FromUserName);
       console.log(result.xml.Content);
-
     });
   } else { console.log("connect fail!") }
 });
