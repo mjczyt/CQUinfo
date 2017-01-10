@@ -50,6 +50,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 app.listen(2000,function(){
-  console.log("start");
+  console.log("start listen on 2000");
 })
 module.exports = app;
