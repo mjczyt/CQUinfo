@@ -40,6 +40,9 @@ $(function() {
                         break;
                 }
             });
+            $(".loader").remove();
+            $("#container").css({ 'display': 'block' });
+
         }
 
 
