@@ -11,4 +11,6 @@ router.get('/:id/:pwd', function(req, res, next) {
     res.render('class',{info:info});
 });
 
+
+
 module.exports = router;
