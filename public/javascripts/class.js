@@ -6,7 +6,7 @@ $(function() {
         getData,
         'json'
     );
-    $.post('http://cqyou.top:5001/api/schedule', { "stdid": id, "stdpwd": pwd, "week": "1" },
+    $.post('http://cqyou.top:5000/apiB/schedule', { "stdid": id, "stdpwd": pwd, "week": "1" },
         getData,
         'json'
     );
