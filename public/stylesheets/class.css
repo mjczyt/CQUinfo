@@ -1,38 +1,44 @@
 @charset "UTF-8";
-
-html, body{
-	padding:0;
-	margin:0;
-	position:relative;
-	background:url("http://ojyfslgzw.bkt.clouddn.com/body.jpg");
-	background-repeat:repeat;
-	color:#fff;
-	letter-spacing:1px;
-	font-family:Georgia, "Times New Roman", Times, serif;
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background: url("http://ojyfslgzw.bkt.clouddn.com/body.jpg");
+    background-repeat: repeat;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.zebra caption{
-	font-size:20px;
-	font-weight:normal;
-	background:url("http://ojyfslgzw.bkt.clouddn.com/cow.png");
-	background-repeat:no-repeat;
-	background-position: 130px center;
-	padding-top: 20px;
-	height:50px;}
+.zebra caption {
+    font-size: 35px;
+    font-weight: normal;
+    background-position: 130px center;
+    padding-top: 20px;
+    height: 50px;
+    margin: 2% auto;
+}
 
-#container{
-	display:none;
-	padding-top:10px;
-	width:87%;
-	margin:4% auto;
+#container {
+    height: 100%;
+    display: none;
+    padding-top: 10px;
+    width: 87%;
+    margin: 6% auto;
 }
 
 table {
+    margin: 2% auto;
+    font-size: 30px;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+    height: 70%;
     border-collapse: collapse;
     border-spacing: 0;
-	width:100%;
-	-webkit-box-shadow:  0px 2px 1px 5px rgba(242, 242, 242, 0.1);
-    box-shadow:  0px 2px 1px 5px rgba(242, 242, 242, 0.1);
+    width: 93%;
+    -webkit-box-shadow: 0px 2px 1px 5px rgba(242, 242, 242, 0.1);
+    box-shadow: 0px 2px 1px 5px rgba(242, 242, 242, 0.1);
 }
 
 .zebra {
@@ -43,33 +49,37 @@ table {
     border-left: 1px solid #555;
     border-top: 1px solid #555;
     padding: 4px;
-    text-align: left;    
+    text-align: center;
 }
 
-.zebra th, .zebra th:hover {
+.zebra th,
+.zebra th:hover {
     border-left: 1px solid #555;
-	border-bottom: 1px solid #828282;
-    padding: 20px;  
-    background-color:#151515 !important;
+    border-bottom: 1px solid #828282;
+    padding: 20px;
+    background-color: #151515 !important;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#151515), to(#404040)) !important;
     background-image: -webkit-linear-gradient(top, #151515, #404040) !important;
-    background-image:    -moz-linear-gradient(top, #151515, #404040) !important;
-    background-image:     -ms-linear-gradient(top, #151515, #404040) !important;
-    background-image:      -o-linear-gradient(top, #151515, #404040) !important;
-    background-image:         linear-gradient(top, #151515, #404040) !important;
-	color:#fff !important;
-	font-weight:normal;
+    background-image: -moz-linear-gradient(top, #151515, #404040) !important;
+    background-image: -ms-linear-gradient(top, #151515, #404040) !important;
+    background-image: -o-linear-gradient(top, #151515, #404040) !important;
+    background-image: linear-gradient(top, #151515, #404040) !important;
+    color: #fff !important;
+    font-weight: normal;
 }
 
 .zebra tbody tr:nth-child(even) {
     background: #000 !important;
-	color:#fff;
-}
-.loader{
-	margin:20% 45%;
+    color: #fff;
 }
 
- .ball-scale-ripple-multiple > div {
+.loader {
+    margin: 40% 45%;
+
+
+}
+
+.ball-scale-ripple-multiple > div {
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     position: absolute;
@@ -81,14 +91,14 @@ table {
     border: 2px solid #fff;
     -webkit-animation: ball-scale-ripple-multiple 1.25s 0s infinite cubic-bezier(.21, .53, .56, .8);
     animation: ball-scale-ripple-multiple 1.25s 0s infinite cubic-bezier(.21, .53, .56, .8);
-    }
+}
 
-.zebra tr:hover *{
+.zebra tr:hover * {
     background: #eeeeee;
-	color:#000;
+    color: #000;
 }
 
 .zebra tr {
-	background:#404040;
-	color:#fff;
+    background: #404040;
+    color: #fff;
 }
