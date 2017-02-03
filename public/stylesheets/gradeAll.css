@@ -20,8 +20,8 @@
  }
  
  #accordion {
-     padding-right: 24px;
-     padding-left: 24px;
+     padding-right: 35px;
+     padding-left: 28px;
      z-index: 1;
  }
  
@@ -44,8 +44,8 @@
      display: block;
      font-size: 16px;
      font-weight: bold;
-     background: #F1746E;
-     color: #C9CABB;
+     background: whitesmoke;
+     color: #8B96A0;
      padding: 15px 25px;
      position: relative;
      margin-left: -24px;
@@ -53,15 +53,15 @@
  }
 
  #accordion .panel-title a.collapsed {
-     background: #C9CABB;
-     color: #F1746E;
+     background: #8B96A0;
+     color: whitesmoke;
      margin-left: 0;
      transition: all 0.3s ease 0s;
  }
 
  #accordion .panel-title a:before {
      content: "";
-     border-left: 24px solid #F1746E;
+     border-left: 24px solid whitesmoke;
      border-top: 24px solid transparent;
      border-bottom: 24px solid transparent;
      position: absolute;
@@ -71,7 +71,7 @@
  }
 
  #accordion .panel-title a.collapsed:before {
-     border-left-color: #C9CABB;
+     border-left-color: #8B96A0;
  }
 
  #accordion .panel-title a:after {
@@ -80,12 +80,12 @@
      top: 30%;
      right: 15px;
      font-size: 18px;
-     color: #C9CABB;
+     color: #8B96A0;
  }
 
  #accordion .panel-title a.collapsed:after {
      content: "\f107";
-     color: #F1746E;
+     color: whitesmoke;
  }
 
  #accordion .panel-collapse {
@@ -94,7 +94,7 @@
 
  #accordion .panel-collapse.in:before {
      content: "";
-     border-right: 24px solid #C9CABB;
+     border-right: 24px solid #8B96A0;
      border-bottom: 18px solid transparent;
      position: absolute;
      top: 0;
@@ -104,7 +104,7 @@
  #accordion .panel-body {
      font-size: 14px;
      color: #333;
-     background: #F5F6EB;
+     background: #EEEEFF;
      border-top: none;
      z-index: 1;
  }
