@@ -1,0 +1,110 @@
+ html,
+ body {
+     height: 100%;
+     padding: 0;
+     margin: 0;
+     position: relative;
+     background: url("http://ojyfslgzw.bkt.clouddn.com/body.jpg");
+     background-repeat: repeat;
+     color: #fff;
+     letter-spacing: 1px;
+     font-family: Georgia, "Times New Roman", Times, serif;
+ }
+ .container{
+     margin:16% auto;
+ }
+ a:hover,
+ a:focus {
+     text-decoration: none;
+     outline: none;
+ }
+ 
+ #accordion {
+     padding-right: 24px;
+     padding-left: 24px;
+     z-index: 1;
+ }
+ 
+ #accordion .panel {
+     border: none;
+     box-shadow: none;
+ }
+ 
+ #accordion .panel-heading {
+     padding: 0;
+     border-radius: 0;
+     border: none;
+ }
+ 
+ #accordion .panel-title {
+     padding: 0;
+ }
+ 
+ #accordion .panel-title a {
+     display: block;
+     font-size: 16px;
+     font-weight: bold;
+     background: #F1746E;
+     color: #C9CABB;
+     padding: 15px 25px;
+     position: relative;
+     margin-left: -24px;
+     transition: all 0.3s ease 0s;
+ }
+
+ #accordion .panel-title a.collapsed {
+     background: #C9CABB;
+     color: #F1746E;
+     margin-left: 0;
+     transition: all 0.3s ease 0s;
+ }
+
+ #accordion .panel-title a:before {
+     content: "";
+     border-left: 24px solid #F1746E;
+     border-top: 24px solid transparent;
+     border-bottom: 24px solid transparent;
+     position: absolute;
+     top: 0;
+     right: -24px;
+     transition: all 0.3s ease 0s;
+ }
+
+ #accordion .panel-title a.collapsed:before {
+     border-left-color: #C9CABB;
+ }
+
+ #accordion .panel-title a:after {
+     content: "\f106";
+     position: absolute;
+     top: 30%;
+     right: 15px;
+     font-size: 18px;
+     color: #C9CABB;
+ }
+
+ #accordion .panel-title a.collapsed:after {
+     content: "\f107";
+     color: #F1746E;
+ }
+
+ #accordion .panel-collapse {
+     position: relative;
+ }
+
+ #accordion .panel-collapse.in:before {
+     content: "";
+     border-right: 24px solid #C9CABB;
+     border-bottom: 18px solid transparent;
+     position: absolute;
+     top: 0;
+     left: -24px;
+ }
+
+ #accordion .panel-body {
+     font-size: 14px;
+     color: #333;
+     background: #F5F6EB;
+     border-top: none;
+     z-index: 1;
+ }
