@@ -9,6 +9,7 @@ body {
     color: #fff;
     letter-spacing: 1px;
     font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 14px;
 }
 header{
     display: flex;
@@ -21,7 +22,7 @@ header{
     -webkit-align-items: center;
 }
 .container {
-    margin: 2% auto;
+    margin: 1% auto;
 }
 
 a {
@@ -145,11 +146,14 @@ header h1 {
 }
 
 body .totallInfo{
-    padding: 2% 3%;
+    padding: 3% 4%;
     top:12%;
     margin-top: 1%;
     text-align: center;
     border: solid white 1px;
     border-radius: 20px;
     font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
+}
+header a img{
+    width: 2rem;
 }
