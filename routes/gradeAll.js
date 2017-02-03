@@ -7,7 +7,7 @@ router.get('/:id/:pwd', function(req, res, next) {
         id: req.params.id,
         pwd: pwd
     };
-    res.render('gradeAll', { info: info, gradeAll: test.gradeAll });
+    res.render('gradeAll', { info: info, gradeAll: test.gradeAll,totallInfo:test.totallInfo });
 
 });
 
