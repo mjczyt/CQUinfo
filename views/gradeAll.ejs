@@ -6,6 +6,7 @@
     <title>GradeAll</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/reset.css">
     <link href="http://oj8njbmph.bkt.clouddn.com/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/stylesheets/gradeAll.css">
 </head>
@@ -26,14 +27,17 @@
                                 <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#accordion"
                                        href=<%=href %> aria-expanded="false" aria-controls=<%=control %> class="collapsed" >
-                                          <%= lesson.学科 %>
+                                          <%= lesson.学科 +"    ["+lesson.成绩+"]"%>
                                     </a>
                                 </h4>
                             </div>
                             <div id=<%=id %> class="panel-collapse collapse" role="tabpanel"
                                  aria-labelledby="headingThree">
                                 <div class="panel-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent </p>
+                                    <li>绩点：<%=lesson.绩点%></li>
+                                    <li>学分：<%=lesson.学分%></li>
+                                    <li>修读性质：<%=lesson.修读性质%></li>
+                                    <li>类别：<%=lesson.类别%></li>
                                 </div>
                             </div>
                         </div>

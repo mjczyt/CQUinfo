@@ -24,9 +24,12 @@
       <file leaf-file-name="gradeAll.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stylesheets/gradeAll.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3288364">
-              <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
-              <folding />
+            <state vertical-scroll-proportion="1.3693086">
+              <caret line="97" column="17" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
+              <folding>
+                <marker date="1486105507000" expanded="true" signature="571:580" placeholder="{...}" />
+                <marker date="1486105507000" expanded="true" signature="670:673" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,9 +169,12 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/stylesheets/gradeAll.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3288364">
-          <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
-          <folding />
+        <state vertical-scroll-proportion="1.3693086">
+          <caret line="97" column="17" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
+          <folding>
+            <marker date="1486105507000" expanded="true" signature="571:580" placeholder="{...}" />
+            <marker date="1486105507000" expanded="true" signature="670:673" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

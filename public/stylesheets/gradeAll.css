@@ -11,7 +11,10 @@
      font-family: Georgia, "Times New Roman", Times, serif;
  }
  .container{
-     margin:16% auto;
+     margin:18% auto;
+ }
+ a{
+     font-family: Helvetica, Arial, sans-serif;
  }
  a:hover,
  a:focus {
@@ -26,14 +29,13 @@
  }
  
  #accordion .panel {
-     border: none;
      box-shadow: none;
  }
  
  #accordion .panel-heading {
      padding: 0;
      border-radius: 0;
-     border: none;
+
  }
  
  #accordion .panel-title {
@@ -44,8 +46,8 @@
      display: block;
      font-size: 16px;
      font-weight: bold;
-     background: whitesmoke;
-     color: #8B96A0;
+     background: #52616B;
+     color: #E3E8EC;
      padding: 15px 25px;
      position: relative;
      margin-left: -24px;
@@ -53,15 +55,15 @@
  }
 
  #accordion .panel-title a.collapsed {
-     background: #8B96A0;
-     color: whitesmoke;
+     background: #E3E8EC;
+     color: #52616B;
      margin-left: 0;
      transition: all 0.3s ease 0s;
  }
 
  #accordion .panel-title a:before {
      content: "";
-     border-left: 24px solid whitesmoke;
+     border-left: 24px solid #52616B;
      border-top: 24px solid transparent;
      border-bottom: 24px solid transparent;
      position: absolute;
@@ -71,21 +73,21 @@
  }
 
  #accordion .panel-title a.collapsed:before {
-     border-left-color: #8B96A0;
+     border-left-color: #E3E8EC;
  }
 
  #accordion .panel-title a:after {
-     content: "\f106";
+     content: "\21E9";
      position: absolute;
      top: 30%;
      right: 15px;
      font-size: 18px;
-     color: #8B96A0;
+     color: #E3E8EC;
  }
 
  #accordion .panel-title a.collapsed:after {
-     content: "\f107";
-     color: whitesmoke;
+     content: "\21E8";
+     color: #52616B;
  }
 
  #accordion .panel-collapse {
@@ -94,7 +96,7 @@
 
  #accordion .panel-collapse.in:before {
      content: "";
-     border-right: 24px solid #8B96A0;
+     border-right: 24px solid #E3E8EC;
      border-bottom: 18px solid transparent;
      position: absolute;
      top: 0;
