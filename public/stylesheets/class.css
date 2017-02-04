@@ -1,6 +1,9 @@
 @charset "UTF-8";
 html,
 body {
+     display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100%;
     padding: 0;
     margin: 0;
@@ -9,7 +12,9 @@ body {
     background-repeat: repeat;
     color: #fff;
     letter-spacing: 1px;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
+    font-size: 14px;
+
 }
 
 .zebra caption {
@@ -22,15 +27,15 @@ body {
 }
 
 #container {
-    height: 100%;
-    display: none;
+    /*height: 100%;*/
+    display: block;
     padding-top: 10px;
     width: 87%;
-    margin: 3% auto;
+    margin: 0 auto;
 }
 
 table {
-    margin: 2% auto;
+    margin: 4% auto;
     font-size: 30px;
     font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
     height: 70%;
@@ -99,4 +104,55 @@ table {
 .zebra tr {
     background: #404040;
     color: #fff;
+}
+header{
+    margin-top: 7%;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    align-items: center;
+    -webkit-align-items: center;
+}
+header .button {
+    color: #ffffff;
+    font-size: 26px;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 100%;
+    border: solid white 1px;
+    position: absolute;
+    left: 4rem;
+    top: 4rem;
+}
+
+header .button:hover {
+    color: white;
+}
+
+header h1 {
+    font-size: 4rem;
+    font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
+}
+
+body .totallInfo{
+    width: 20rem;
+    font-size: 2rem;
+    padding: 2% 4%;
+    top:12%;
+    margin-top: 1%;
+    text-align: center;
+    border: solid white 1px;
+    border-radius: 20px;
+    font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
+}
+header a img{
+    width: 8rem;
+}
+.footTitle{
+    font-size: 2rem;
+
+    margin: 5rem auto;
 }

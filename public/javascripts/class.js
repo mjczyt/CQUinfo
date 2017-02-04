@@ -1,50 +1,37 @@
 $(function() {
-    var id = $("#id").text();
-    var pwd = $("#pwd").text();
-    var gotData = false;
-    $.post('http://cqyou.top:5000/api/schedule', { "stdid": id, "stdpwd": pwd, "week": "1" },
-        getData,
-        'json'
-    );
-    $.post('http://cqyou.top:5000/apiB/schedule', { "stdid": id, "stdpwd": pwd, "week": "1" },
-        getData,
-        'json'
-    );
+
+    var schedule = $("#schedule").text();
+    schedule=schedule.substring(3);
+    getData(schedule);
 
     function getData(data) {
-        if (gotData == false) {
-            gotData = true;
-            data.classTable.forEach(function(element, index) {
-                var day = element.substring(1, 2);
-                switch (day) {
-                    case "一":
-                        changeTable(1, element);
-                        break;
-                    case "二":
-                        changeTable(2, element);
-                        break;
-                    case "三":
-                        changeTable(3, element);
-                        break;
-                    case "四":
-                        changeTable(4, element);
-                        break;
-                    case "五":
-                        changeTable(5, element);
-                        break;
-                    case "六":
-                        changeTable(6, element);
-                        break;
-                    case "日":
-                        changeTable(7, element);
-                        break;
-                }
-            });
-            $(".loader").remove();
-            $("#container").css({ 'display': 'block' });
-
-        }
-
+        data = data.split(",");
+        data.forEach(function(element, index) {
+            var day = element.substring(1, 2);
+            switch (day) {
+                case "一":
+                    changeTable(1, element);
+                    break;
+                case "二":
+                    changeTable(2, element);
+                    break;
+                case "三":
+                    changeTable(3, element);
+                    break;
+                case "四":
+                    changeTable(4, element);
+                    break;
+                case "五":
+                    changeTable(5, element);
+                    break;
+                case "六":
+                    changeTable(6, element);
+                    break;
+                case "日":
+                    changeTable(7, element);
+                    break;
+            }
+        });
 
     };
 
@@ -62,11 +49,5 @@ $(function() {
             $(nextFilter).remove();
             $(filter).attr("rowSpan", "2").text(info[1] + "@" + info[4]);
         }
-
-
     }
-
-
-
-
 })
