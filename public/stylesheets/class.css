@@ -1,5 +1,15 @@
 @charset "UTF-8";
-html,
+html{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background: url("http://ojyfslgzw.bkt.clouddn.com/body.jpg");
+    background-repeat: repeat;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
+    font-size: 14px;
+}
 body {
      display: flex;
     flex-direction: column;
