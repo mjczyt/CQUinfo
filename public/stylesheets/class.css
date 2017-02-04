@@ -17,17 +17,10 @@ body {
 
 }
 
-.zebra caption {
-    font-size: 50px;
-    font-weight: normal;
-    background-position: 130px center;
-    padding-top: 20px;
-    height: 50px;
-    margin: 5% auto;
-}
+
 
 #container {
-    /*height: 100%;*/
+
     display: block;
     padding-top: 10px;
     width: 87%;
@@ -38,7 +31,7 @@ table {
     margin: 4% auto;
     font-size: 30px;
     font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
-    height: 70%;
+    height: 120%;
     border-collapse: collapse;
     border-spacing: 0;
     width: 93%;
@@ -53,7 +46,7 @@ table {
 .zebra td {
     border-left: 1px solid #555;
     border-top: 1px solid #555;
-    padding: 4px;
+    padding: 0.7rem;
     text-align: center;
 }
 
@@ -142,7 +135,7 @@ body .totallInfo{
     font-size: 2rem;
     padding: 2% 4%;
     top:12%;
-    margin-top: 1%;
+    margin-top: 3%;
     text-align: center;
     border: solid white 1px;
     border-radius: 20px;
@@ -154,5 +147,5 @@ header a img{
 .footTitle{
     font-size: 2rem;
 
-    margin: 5rem auto;
+    margin: 3rem auto;
 }
