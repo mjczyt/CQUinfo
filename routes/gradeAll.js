@@ -2,10 +2,9 @@ var express = require('express');
 var router = express.Router();
 /* GET users listing. */
 router.get('/:id/:pwd', function(req, res, next) {
-    var pwd = new Buffer(req.params.pwd, 'base64').toString();
     var info = {
         id: req.params.id,
-        pwd: pwd
+        pwd: req.params.pwd
     };
     res.render('gradeAll', { info: info, gradeAll: test.gradeAll,totallInfo:test.totallInfo });
 
