@@ -99,6 +99,7 @@ table {
     color: #fff;
 }
 header{
+    width: 100%;
     margin-top: 7%;
     display: flex;
     display: -webkit-flex;

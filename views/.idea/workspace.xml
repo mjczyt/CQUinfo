@@ -24,8 +24,8 @@
       <file leaf-file-name="main.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6981424">
-              <caret line="47" column="22" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.44117647">
+              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -59,8 +59,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main.ejs" />
         <option value="$PROJECT_DIR$/class.ejs" />
+        <option value="$PROJECT_DIR$/main.ejs" />
       </list>
     </option>
   </component>
@@ -207,8 +207,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6981424">
-          <caret line="47" column="22" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.44117647">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
           <folding />
         </state>
       </provider>
