@@ -29,6 +29,7 @@ header {
     background-size: contain;
     -webkit-background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
     width: 90%;
     height: 86%;
     margin: 0 5%;
