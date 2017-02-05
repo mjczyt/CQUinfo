@@ -24,6 +24,7 @@ header {
 }
 
 .container {
+    box-sizing: border-box;
     margin: 0 auto;
     background-image: url("http://ojyfslgzw.bkt.clouddn.com/gradeBorder.png");
     background-size: contain;
@@ -33,17 +34,18 @@ header {
     height: 80%;
     margin: 4% auto;
     position: relative;
+    padding: 0px;
 }
 
 .container .grade {
-    width: 90%;
     box-sizing: border-box;
+    width: 100%;
     position: absolute;
-    padding-right: 7%;
-    padding-left: 8%;
+    padding-right: 11%;
+    padding-left: 11%;
     top: 29%;
     overflow: scroll;
-    height: 19em;
+
 }
 
 .container p {
@@ -51,6 +53,7 @@ header {
     font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
     color: #FDECC1;
     text-align: center;
+    margin-bottom: 3px;
 }
 
 a {
