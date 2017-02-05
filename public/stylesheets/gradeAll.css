@@ -11,7 +11,8 @@ body {
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 14px;
 }
-header{
+
+header {
     display: flex;
     display: -webkit-flex;
     flex-wrap: wrap;
@@ -21,6 +22,7 @@ header{
     align-items: center;
     -webkit-align-items: center;
 }
+
 .container {
     margin: 1% auto;
 }
@@ -144,15 +146,21 @@ header h1 {
     font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
 }
 
-body .totallInfo{
+body .totallInfo {
     padding: 3% 4%;
-    top:12%;
+    top: 12%;
     margin-top: 1%;
     text-align: center;
     border: solid white 1px;
     border-radius: 20px;
     font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
 }
-header a img{
+
+header a img {
     width: 2rem;
+}
+
+.panel-body p {
+    font-weight: 500;
+    font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
 }
