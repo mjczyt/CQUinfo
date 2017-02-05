@@ -25,14 +25,13 @@ header {
 
 .container {
     box-sizing: border-box;
-    margin: 0 auto;
     background-image: url("http://ojyfslgzw.bkt.clouddn.com/gradeBorder.png");
     background-size: contain;
     -webkit-background-size: contain;
     background-repeat: no-repeat;
-    width: 95%;
-    height: 80%;
-    margin: 4% auto;
+    width: 100%;
+    height: 90%;
+    margin: 0 auto;
     position: relative;
     padding: 0px;
 }
@@ -43,7 +42,7 @@ header {
     position: absolute;
     padding-right: 11%;
     padding-left: 11%;
-    top: 29%;
+    top: 27%;
     overflow: scroll;
 
 }
@@ -53,7 +52,7 @@ header {
     font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
     color: #FDECC1;
     text-align: center;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
 }
 
 a {
