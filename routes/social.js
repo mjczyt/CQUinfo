@@ -1,10 +1,13 @@
 var express = require('express');
 var router = express.Router();
-    /* GET users listing. */
+var config = require('.././config')
+
+/* GET users listing. */
 router.get('/:id/:pwd', function(req, res, next) {
     var info = {
         id: req.params.id,
-        pwd: req.params.pwd
+        pwd: req.params.pwd,
+        mainSite: config.mainSite
     };
     res.render('social', { info: info });
 });
