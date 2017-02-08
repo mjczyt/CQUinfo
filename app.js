@@ -11,7 +11,7 @@ var classTable = require("./routes/class");
 var mainSite = require("./routes/main");
 var gradeAll=require('./routes/gradeAll');
 var grade=require('./routes/grade');
-
+var social=require("./routes/social");
 
 var app = express();
 
@@ -40,6 +40,8 @@ app.use('/main',mainSite);
 var gradeAll=require('./routes/gradeAll');
 app.use('/gradeAll',gradeAll);
 app.use('/grade',grade);
+app.use('/social',social);
+
 
 
 // catch 404 and forward to error handler
