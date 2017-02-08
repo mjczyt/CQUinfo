@@ -34,9 +34,9 @@
     </section>
     <span class="title">颜狗圈</span>
     <div class="icon">
-    <% var street="http://cqyou.top:2000/street/"+info.id+"/"+info.pwd %>
-    <% var chat="http://cqyou.top:2000/chat/"+info.id+"/"+info.pwd %>
-    <% var message="http://cqyou.top:2000/message/"+info.id+"/"+info.pwd %>
+    <% var street=info.mainSite+":2000/street/"+info.id+"/"+info.pwd %>
+    <% var chat=info.mainSite+":2000/chat/"+info.id+"/"+info.pwd %>
+    <% var message=info.mainSite+":2000/message/"+info.id+"/"+info.pwd %>
         <a href=<%=street%>><img src="/images/camera.svg">重大街拍</a>
         <a href=<%=chat%>><img src="/images/chat.svg">瞎撩</a>
         <a href=<%=message%>><img src="/images/mail.svg">私信</a>
