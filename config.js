@@ -1,4 +1,4 @@
 var config={
-    'mainSite':'jwc.cquwukong.com'
+    'mainSite':'http://jwc.cquwukong.com'
 }
 module.exports=config;
