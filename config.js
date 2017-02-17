@@ -1,4 +1,4 @@
 var config={
-    'mainSite':'http://jwc.cquwukong.com'
+    'mainSite':'http://ophoto4.me'
 }
 module.exports=config;
