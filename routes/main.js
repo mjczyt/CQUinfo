@@ -1,15 +1,21 @@
 var express = require('express');
 var router = express.Router();
 var config = require('.././config')
-
+var model = require("./weixinModel");
     /* GET users listing. */
-router.get('/:id/:pwd', function(req, res, next) {
+router.get('/:openid', function(req, res, next) {
     var info = {
-        id: req.params.id,
-        pwd: req.params.pwd,
         mainSite:config.mainSite
     };
-    res.render('main', { info: info });
+    model.findOne({openid:req.params.openid},function(err,std){
+    	if(std){
+    		console.log(std.studentId);
+    		 res.render('main', { info: info });
+    	}else{
+    		console.log("跳转至绑定页面");
+    	}
+    })
+   
 });
 
 
