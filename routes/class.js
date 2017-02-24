@@ -1,14 +1,26 @@
 var express = require('express');
 var router = express.Router();
 var config = require('.././config')
-    /* GET users listing. */
-router.get('/:id/:pwd', function(req, res, next) {
-    var info = {
-        id: req.params.id,
-        pwd: req.params.pwd,
+var model = require("./weixinModel");
+var studentModel = require("./studentModel");
+
+
+/* GET users listing. */
+router.get('/:openid', function(req, res, next) {
+    var info =
+        openid: req.params.openid,
         mainSite: config.mainSite
-    };
-    res.render('class', { info: info, classTable: str.schedule[0], week: '一' });
+}; model.findOne({ openid: req.params.openid }, function(err, std) {
+    if (std) {
+        studentModel.findOne({ openid: req.params.openid }, function(error, studentInfo) {
+            var stdInfo = JSON.parse(studentInfo);
+            res.render('class', { info: info, classTable: stdInfo.schedule[0], week: '二' });
+        })
+
+    } else {
+        console.log("跳转至绑定页面");
+    }
+})
 });
 
 var str = {
