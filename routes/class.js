@@ -10,7 +10,7 @@ router.get('/:openid', function(req, res, next) {
     var info =
         openid: req.params.openid,
         mainSite: config.mainSite
-}; model.findOne({ openid: req.params.openid }, function(err, std) {
+}; model.findOne({ openid:req.params.openid }, function(err, std) {
     if (std) {
         studentModel.findOne({ openid: req.params.openid }, function(error, studentInfo) {
             var stdInfo = JSON.parse(studentInfo);
