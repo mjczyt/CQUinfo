@@ -14,7 +14,7 @@ router.get('/:openid', function(req, res, next) {
     model.findOne({ openid: req.params.openid }, function(err, std) {
         if (std) {
             studentModel.findOne({ openid: req.params.openid }, function(error, studentInfo) {
-                res.render('class', { info: info, classTable: studentInfo.schedule[0], week: '二' });
+                res.render('class', { info: info, classTable: studentInfo.schedule[0], week: '一' });
             })
 
         } else {
