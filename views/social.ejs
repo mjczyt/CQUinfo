@@ -10,10 +10,13 @@
     <script src="http://ojyfslgzw.bkt.clouddn.com/modernizr.js"></script>
 </head>
 <body>
+<header>
+    <% var home = info.mainSite+":2000/main/" + info.openid %>
+    <a class="button" href=<%= home %>><img src="/images/heart.svg"></a>
+
+</header>
 
 <div id="container" style="display: block;">
-    <p style="display: none;" id="id"><%= info.id %></p>
-    <p style="display: none;" id="pwd"><%= info.pwd %></p>
     <!--标题变换动画-->
     <section class="cd-intro">
         <h1 class="cd-headline letters scale">
@@ -34,9 +37,9 @@
     </section>
     <span class="title">颜狗圈</span>
     <div class="icon">
-    <% var street=info.mainSite+":2000/street/"+info.id+"/"+info.pwd %>
-    <% var chat=info.mainSite+":2000/chat/"+info.id+"/"+info.pwd %>
-    <% var message=info.mainSite+":2000/message/"+info.id+"/"+info.pwd %>
+    <% var street=info.mainSite+":2000/street/"+info.openid %>
+    <% var chat=info.mainSite+":2000/chat/"+info.openid %>
+    <% var message=info.mainSite+":2000/message/"+info.openid %>
         <a href=<%=street%>><img src="/images/camera.svg">重大街拍</a>
         <a href=<%=chat%>><img src="/images/chat.svg">瞎撩</a>
         <a href=<%=message%>><img src="/images/mail.svg">私信</a>
