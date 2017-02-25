@@ -7,10 +7,11 @@ var superagent = require("superagent");
 
 
 /* GET users listing. */
-router.get('/:openid', function(req, res, next) {
+router.get('/:openid/:message', function(req, res, next) {
     var info = {
         openid: req.params.openid,
-        mainSite: config.mainSite
+        mainSite: config.mainSite,
+        message: req.params.message
     };
 
     res.render('bind', { info: info });
@@ -23,6 +24,7 @@ router.post('/:openid', function(request, response, next) {
         mainSite: config.mainSite
     };
     console.log("bind" + request.body.id + " " + request.body.password);
+
     var replied = false;
     superagent
         .post('http://cqyou.top:5000/api/grade')
@@ -38,10 +40,11 @@ router.post('/:openid', function(request, response, next) {
                 console.log(err);
             } else {
                 var pattern = /(wrong)/;
-                if (pattern.exec(res.text) == null) {
-                    response.send('<p>绑定成功</p>');
-                } else {
-                    response.send('<p>账号密码有误</p>');
+                if (pattern.exec(res.text) == null && replied == false) {
+                    response.redirect(config.mainSite + ":2000/bind/success");
+                } else if (replied == false) {
+                    response.redirect(config.mainSite + ":2000/bind/fail");
+                    replied == true;
                 }
             }
         });
@@ -61,10 +64,11 @@ router.post('/:openid', function(request, response, next) {
                 console.log(err);
             } else {
                 var pattern = /(wrong)/;
-                if (pattern.exec(res.text) == null) {
-                    response.send('<p>绑定成功</p>');
-                } else {
-                    response.send('<p>账号密码有误</p>');
+                if (pattern.exec(res.text) == null && replied == false) {
+                    response.redirect(config.mainSite + ":2000/bind/success");
+                } else if (replied == false) {
+                    response.redirect(config.mainSite + ":2000/bind/fail");
+                    replied == true;
                 }
             }
         });
