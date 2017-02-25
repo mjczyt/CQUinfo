@@ -65,7 +65,7 @@ $(function() {
             $(nextFilter1).remove();
             $(nextFilter2).remove();
             $(nextFilter3).remove();
-            $(filter).attr("rowSpan", "2").text(info[1] + "@" + info[4]);
+            $(filter).attr("rowSpan", "4").text(info[1] + "@" + info[4]);
         }
     }
 })
