@@ -59,9 +59,10 @@ $(function() {
         }
         if (info[3] - info[2] == 3) {
             var filter = 'tbody>tr:eq(' + info[2] + ')>td:eq(' + week + ')';
-            var nextFilter1 = 'tbody>tr:eq(' + info[3] + ')>td:eq(' + 1 + ')';
-            var nextFilter2 = 'tbody>tr:eq(' + info[3] + ')>td:eq(' + 2 + ')';
-            var nextFilter3 = 'tbody>tr:eq(' + info[3] + ')>td:eq(' + 3 + ')';
+            var nextFilter1 = 'tbody>tr:eq(' + info[3]-1 + ')>td:eq(' + 1 + ')';
+            var nextFilter2 = 'tbody>tr:eq(' + info[3]-2 + ')>td:eq(' + 1+ ')';
+            var nextFilter3 = 'tbody>tr:eq(' + info[3]-3 + ')>td:eq(' + 1 + ')';
+
             console.log(nextFilter1);
             console.log(nextFilter3);
             console.log(nextFilter2);
