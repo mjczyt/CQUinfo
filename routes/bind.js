@@ -41,9 +41,13 @@ router.post('/:openid', function(request, response, next) {
             } else {
                 var pattern = /(wrong)/;
                 if (pattern.exec(res.text) == null && replied == false) {
-                    response.redirect(config.mainSite + ":2000/bind/"+request.params.openid+"?message=success");
+                    replied == true;
+                    bindInDB(request.body.id, request.body.password, request.params.openid);
+
+                    response.redirect(config.mainSite + ":2000/bind/" + request.params.openid + "?message=success");
+
                 } else if (replied == false) {
-                    response.redirect(config.mainSite + ":2000/bind/"+request.params.openid+"?message=fail");
+                    response.redirect(config.mainSite + ":2000/bind/" + request.params.openid + "?message=fail");
                     replied == true;
                 }
             }
@@ -65,17 +69,28 @@ router.post('/:openid', function(request, response, next) {
             } else {
                 var pattern = /(wrong)/;
                 if (pattern.exec(res.text) == null && replied == false) {
-                    response.redirect(config.mainSite + ":2000/bind/"+request.params.openid+"?message=success");
+                    replied == true;
+                    bindInDB(request.body.id, request.body.password, request.params.openid);
+
+                    response.redirect(config.mainSite + ":2000/bind/" + request.params.openid + "?message=success");
+
+
                 } else if (replied == false) {
-                    response.redirect(config.mainSite + ":2000/bind/"+request.params.openid+"?message=fail");
+                    response.redirect(config.mainSite + ":2000/bind/" + request.params.openid + "?message=fail");
                     replied == true;
                 }
             }
         });
-
-
-
 });
 
-
+function bindInDB(id, password, openid) {
+    var student = new model({
+        openid: openid,
+        studentId: id,
+        studentPassword: password
+    });
+    student.save(function() {
+        console.log("saved new student infomation in database!");
+    });
+}
 module.exports = router;
