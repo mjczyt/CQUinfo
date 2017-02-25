@@ -46,9 +46,11 @@ router.post('/:openid', function(request, response, next) {
                         bindInDB(request.body.id, request.body.password, request.params.openid);
                         response.redirect(config.mainSite + ":2000/bind/" + request.params.openid + "?message=success");
                     }
-                } else if (replied == false) {
-                    replied == true;
-                    response.redirect(config.mainSite + ":2000/bind/" + request.params.openid + "?message=fail");
+                } else {
+                    if (replied == false) {
+                        replied == true;
+                        response.redirect(config.mainSite + ":2000/bind/" + request.params.openid + "?message=fail");
+                    }
                 }
             }
         });
@@ -74,9 +76,11 @@ router.post('/:openid', function(request, response, next) {
                         bindInDB(request.body.id, request.body.password, request.params.openid);
                         response.redirect(config.mainSite + ":2000/bind/" + request.params.openid + "?message=success");
                     }
-                } else if (replied == false) {
-                    replied == true;
-                    response.redirect(config.mainSite + ":2000/bind/" + request.params.openid + "?message=fail");
+                } else {
+                    if (replied == false) {
+                        replied == true;
+                        response.redirect(config.mainSite + ":2000/bind/" + request.params.openid + "?message=fail");
+                    }
                 }
             }
         });
