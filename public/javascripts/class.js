@@ -45,7 +45,7 @@ $(function() {
         info[3] -= 1;
         if (info[3] - info[2] == 1) {
             var filter = 'tbody>tr:eq(' + info[2] + ')>td:eq(' + week + ')';
-            var nextFilter = 'tbody>tr:eq(' + (info[3] - 1) + ')>td:eq(' + 1 + ')';
+            var nextFilter = 'tbody>tr:eq(' + info[3]  + ')>td:eq(' + 1 + ')';
             $(nextFilter).remove();
             $(filter).attr("rowSpan", "2").text(info[1] + "@" + info[4]);
         }
