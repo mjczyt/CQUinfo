@@ -45,23 +45,23 @@ $(function() {
         info[3] -= 1;
         if (info[3] - info[2] == 1) {
             var filter = 'tbody>tr:eq(' + info[2] + ')>td:eq(' + week + ')';
-            var nextFilter = 'tbody>tr:eq(' + (info[2]+1)  + ')>td:eq(' + week + ')';
+            var nextFilter = 'tbody>tr:eq(' + (info[2] + 1) + ')>td:eq(' + week + ')';
             $(nextFilter).remove();
             $(filter).attr("rowSpan", "2").text(info[1] + "@" + info[4]);
         }
         if (info[3] - info[2] == 2) {
             var filter = 'tbody>tr:eq(' + info[2] + ')>td:eq(' + week + ')';
-            var nextFilter1 = 'tbody>tr:eq(' + info[3]  + ')>td:eq(' + 1 + ')';
-            var nextFilter2 = 'tbody>tr:eq(' + info[3]  + ')>td:eq(' + 1 + ')';
+            var nextFilter1 = 'tbody>tr:eq(' + (info[2] + 1) + ')>td:eq(' + week + ')';
+            var nextFilter2 = 'tbody>tr:eq(' + (info[2] + 2) + ')>td:eq(' + week + ')';
             $(nextFilter1).remove();
             $(nextFilter2).remove();
             $(filter).attr("rowSpan", "3").text(info[1] + "@" + info[4]);
         }
         if (info[3] - info[2] == 3) {
             var filter = 'tbody>tr:eq(' + info[2] + ')>td:eq(' + week + ')';
-            var nextFilter1 = 'tbody>tr:eq(' + (info[2] +1) + ')>td:eq(' + week + ')';
-            var nextFilter2 = 'tbody>tr:eq(' + (info[2] +2) + ')>td:eq(' + week + ')';
-            var nextFilter3 = 'tbody>tr:eq(' + (info[2] +3) + ')>td:eq(' + week+ ')';
+            var nextFilter1 = 'tbody>tr:eq(' + (info[2] + 1) + ')>td:eq(' + week + ')';
+            var nextFilter2 = 'tbody>tr:eq(' + (info[2] + 2) + ')>td:eq(' + week + ')';
+            var nextFilter3 = 'tbody>tr:eq(' + (info[2] + 3) + ')>td:eq(' + week + ')';
 
             console.log(nextFilter1);
             console.log(nextFilter3);
