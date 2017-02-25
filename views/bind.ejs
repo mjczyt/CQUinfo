@@ -83,10 +83,13 @@ padding-left: 4.5%;
 
 
 </div>
-<script type="text/javascript">
-<% if (info.message=="success") {alert("绑定成功")}%>
-<% if (info.message=="fail") {alert("账号密码有误")}%>
-</script>
+
+<% if (info.message=="success") 
+<script type="text/javascript">{alert("绑定成功")}</script>
+%>
+<% if (info.message=="fail") 
+<script type="text/javascript">{alert("账号密码有误")}</script>
+%>
 
 
 <script type="text/javascript" src="/javascripts/textAnimation.js"></script>
