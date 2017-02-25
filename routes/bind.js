@@ -23,8 +23,8 @@ router.post('/:openid', function(req, res, next) {
         openid: req.params.openid,
         mainSite: config.mainSite
     };
-
-    console.log(req.query.id);
+    console.log(req.body);
+    console.log(req.body.id);
     console.log(req.query.password);
 
 
