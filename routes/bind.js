@@ -39,9 +39,9 @@ router.post('/:openid', function(request, response, next) {
             } else {
                 var pattern = /(wrong)/;
                 if (pattern.exec(res.text) == null) {
-                    res.send('<p>绑定成功</p>');
+                    response.send('<p>绑定成功</p>');
                 } else {
-                    res.send('<p>账号密码有误</p>');
+                    response.send('<p>账号密码有误</p>');
                 }
             }
         });
@@ -62,9 +62,9 @@ router.post('/:openid', function(request, response, next) {
             } else {
                 var pattern = /(wrong)/;
                 if (pattern.exec(res.text) == null) {
-                    res.send('<p>绑定成功</p>');
+                    response.send('<p>绑定成功</p>');
                 } else {
-                    res.send('<p>账号密码有误</p>');
+                    response.send('<p>账号密码有误</p>');
                 }
             }
         });
