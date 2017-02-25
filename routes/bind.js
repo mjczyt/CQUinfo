@@ -28,6 +28,7 @@ router.post('/:openid', function(req, res, next) {
     console.log(req.query.password);
 
 
+
 });
 
 

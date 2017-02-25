@@ -65,8 +65,10 @@ padding-left: 4.5%;
       </span>
         </h1>
     </section>
+    <% var bindUrl = info.mainSite+":2000/bind/" + info.openid %>
+
     <span class="title" style="color: white;">绑定教务账号</span>
-    <form action=<%info.mainSite+":2000/bind/"+info.openid %> method="post">
+    <form method="post" action=<%=bindUrl%>  >
      <div class="input-group input-group-lg">
   <span class="input-group-addon" id="sizing-addon1">学号:</span>
   <input type="text" class="form-control" placeholder="教务网账号" aria-describedby="sizing-addon1">
