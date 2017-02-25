@@ -1,7 +1,7 @@
 $(function() {
 
     var schedule = $("#schedule").text();
-    schedule=schedule.substring(3);
+    schedule = schedule.substring(3);
     getData(schedule);
 
     function getData(data) {
@@ -47,6 +47,24 @@ $(function() {
             var filter = 'tbody>tr:eq(' + info[2] + ')>td:eq(' + week + ')';
             var nextFilter = 'tbody>tr:eq(' + info[3] + ')>td:eq(' + 1 + ')';
             $(nextFilter).remove();
+            $(filter).attr("rowSpan", "2").text(info[1] + "@" + info[4]);
+        }
+        if (info[3] - info[2] == 2) {
+            var filter = 'tbody>tr:eq(' + info[2] + ')>td:eq(' + week + ')';
+            var nextFilter1 = 'tbody>tr:eq(' + info[3] + ')>td:eq(' + 1 + ')';
+            var nextFilter2 = 'tbody>tr:eq(' + info[3] + ')>td:eq(' + 2 + ')';
+            $(nextFilter1).remove();
+            $(nextFilter2).remove();
+            $(filter).attr("rowSpan", "3").text(info[1] + "@" + info[4]);
+        }
+        if (info[3] - info[2] == 3) {
+            var filter = 'tbody>tr:eq(' + info[2] + ')>td:eq(' + week + ')';
+            var nextFilter1 = 'tbody>tr:eq(' + info[3] + ')>td:eq(' + 1 + ')';
+            var nextFilter2 = 'tbody>tr:eq(' + info[3] + ')>td:eq(' + 2 + ')';
+            var nextFilter3 = 'tbody>tr:eq(' + info[3] + ')>td:eq(' + 3 + ')';
+            $(nextFilter1).remove();
+            $(nextFilter2).remove();
+            $(nextFilter3).remove();
             $(filter).attr("rowSpan", "2").text(info[1] + "@" + info[4]);
         }
     }
