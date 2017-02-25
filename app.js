@@ -18,6 +18,8 @@ var mainSite = require("./routes/main");
 var gradeAll=require('./routes/gradeAll');
 var grade=require('./routes/grade');
 var social=require("./routes/social");
+var bind=require("./routes/bind");
+
 
 var app = express();
 
@@ -47,6 +49,8 @@ var gradeAll=require('./routes/gradeAll');
 app.use('/gradeAll',gradeAll);
 app.use('/grade',grade);
 app.use('/social',social);
+app.use('/bind',bind);
+
 
 
 

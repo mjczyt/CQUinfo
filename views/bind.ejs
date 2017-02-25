@@ -7,7 +7,38 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/reset.css">
     <link rel="stylesheet" href="/stylesheets/textAnimation.css" type="text/css">
     <link rel="stylesheet" href="/stylesheets/social.css" type="text/css">
+    <script type="text/javascript" src='http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'></script>
+    <script type="text/javascript" src='http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js' ></script>
+    <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
     <script src="http://ojyfslgzw.bkt.clouddn.com/modernizr.js"></script>
+<style type="text/css">
+#container>form{
+    width: 60%;
+    margin: 15% auto;
+}
+  form>.input-group{
+    margin: 8% auto;
+    height: 3%;
+
+  }
+ #container> form>.input-group-lg>.form-control{
+    font-size: 4rem;
+
+    height: 8rem;
+
+ }
+  #container> form>.input-group-lg>#sizing-addon1{
+    font-size: 4rem;
+
+ }
+ #container> form>.btn-default{
+    height: 7.5rem;
+padding-right: 4.5%;
+padding-left: 4.5%;
+    font-size: 5rem;
+    margin:5% 10%;
+ }
+</style>
 </head>
 <body>
 <!-- <header>
@@ -18,11 +49,11 @@
 
 <div id="container" style="display: block;">
     <!--标题变换动画-->
-    <section class="cd-intro">
+    <section class="cd-intro" style="color: white;">
         <h1 class="cd-headline letters scale">
             <span>Hello!&nbsp </span>
       <span class="cd-words-wrapper" >
-        <b class="is-visible"><i class="in">·</i><i class="in">小</i><i class="in">颜</i><i class="in">狗</i><i class="in">·</i><i
+        <b class="is-visible"><i class="in">C</i><i class="in">Q</i><i class="in">Y</i><i class="in">O</i><i class="in">U</i><i
                     class="in">e</i><i class="in">r</i><i class="in">!</i></b>
         
       <b><i class="out">(</i><i class="out">｡</i><i class="out">・</i><i class="out">`</i><i class="out">ω</i><i
@@ -34,22 +65,25 @@
       </span>
         </h1>
     </section>
-    <span class="title">颜狗圈</span>
-    <div class="icon">
-    <% var street=info.mainSite+":2000/street/"+info.openid %>
-    <% var chat=info.mainSite+":2000/chat/"+info.openid %>
-    <% var message=info.mainSite+":2000/message/"+info.openid %>
-        <a href=<%=street%>><img src="/images/camera.svg">重大街拍</a>
-        <a href=<%=chat%>><img src="/images/chat.svg">瞎撩</a>
-        <a href=<%=message%>><img src="/images/mail.svg">私信</a>
-    </div>
+    <span class="title" style="color: white;">绑定教务账号</span>
+    <form action=<%info.mainSite+":2000/bind/"+info.openid %> method="post">
+     <div class="input-group input-group-lg">
+  <span class="input-group-addon" id="sizing-addon1">学号:</span>
+  <input type="text" class="form-control" placeholder="教务网账号" aria-describedby="sizing-addon1">
+</div>
+     <div class="input-group input-group-lg">
+  <span class="input-group-addon" id="sizing-addon1">密码:</span>
+  <input type="text" class="form-control" placeholder="教务网密码" aria-describedby="sizing-addon1">
+</div>
+<input class="btn btn-default" type="submit" value="取消">
+<input class="btn btn-default" type="submit" value="绑定">
+    </form>
 
 
 </div>
 
-<span class="footTitle">重大颜狗的小窝 (。・ω・。)</span>
 
-<script type="text/javascript" src='http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'></script>
+
 <script type="text/javascript" src="/javascripts/textAnimation.js"></script>
 <script type="text/javascript" src="/javascripts/main.js"></script>
 
