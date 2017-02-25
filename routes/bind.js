@@ -7,11 +7,11 @@ var superagent = require("superagent");
 
 
 /* GET users listing. */
-router.get('/:openid/:message', function(req, res, next) {
+router.get('/:openid', function(req, res, next) {
     var info = {
         openid: req.params.openid,
         mainSite: config.mainSite,
-        message: req.params.message
+        message: req.query.message
     };
 
     res.render('bind', { info: info });
@@ -41,9 +41,9 @@ router.post('/:openid', function(request, response, next) {
             } else {
                 var pattern = /(wrong)/;
                 if (pattern.exec(res.text) == null && replied == false) {
-                    response.redirect(config.mainSite + ":2000/bind/success");
+                    response.redirect(config.mainSite + ":2000/bind?message=success");
                 } else if (replied == false) {
-                    response.redirect(config.mainSite + ":2000/bind/fail");
+                    response.redirect(config.mainSite + ":2000/bind?message=fail");
                     replied == true;
                 }
             }
@@ -65,9 +65,9 @@ router.post('/:openid', function(request, response, next) {
             } else {
                 var pattern = /(wrong)/;
                 if (pattern.exec(res.text) == null && replied == false) {
-                    response.redirect(config.mainSite + ":2000/bind/success");
+                    response.redirect(config.mainSite + ":2000/bind?message=success");
                 } else if (replied == false) {
-                    response.redirect(config.mainSite + ":2000/bind/fail");
+                    response.redirect(config.mainSite + ":2000/bind?message=fail");
                     replied == true;
                 }
             }
