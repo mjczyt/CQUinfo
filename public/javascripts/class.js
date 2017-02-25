@@ -63,10 +63,6 @@ $(function() {
             var nextFilter2 = 'tbody>tr:eq(' + (info[2] + 2) + ')>td:eq(' + week + ')';
             var nextFilter3 = 'tbody>tr:eq(' + (info[2] + 3) + ')>td:eq(' + week + ')';
 
-            console.log(nextFilter1);
-            console.log(nextFilter3);
-            console.log(nextFilter2);
-
             $(nextFilter1).remove();
             $(nextFilter2).remove();
             $(nextFilter3).remove();
