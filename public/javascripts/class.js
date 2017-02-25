@@ -62,6 +62,10 @@ $(function() {
             var nextFilter1 = 'tbody>tr:eq(' + info[3] + ')>td:eq(' + 1 + ')';
             var nextFilter2 = 'tbody>tr:eq(' + info[3] + ')>td:eq(' + 2 + ')';
             var nextFilter3 = 'tbody>tr:eq(' + info[3] + ')>td:eq(' + 3 + ')';
+            console.log(nextFilter1);
+            console.log(nextFilter3);
+            console.log(nextFilter2);
+
             $(nextFilter1).remove();
             $(nextFilter2).remove();
             $(nextFilter3).remove();
