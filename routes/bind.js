@@ -44,7 +44,7 @@ router.post('/:openid', function(request, response, next) {
                     if (!replied ) {
                         replied =true;
                         bindInDB(request.body.id, request.body.password, request.params.openid);
-                        response.redirect(config.mainSite + ":2000/bind/" + request.params.openid + "?message=success");
+                        response.redirect(config.mainSite + ":2000/main/" + request.params.openid );
                     }
                 } else {
                     if (!replied ) {
