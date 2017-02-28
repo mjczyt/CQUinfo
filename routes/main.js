@@ -11,12 +11,13 @@ router.get('/:openid', function(req, res, next) {
     var message = req.query.message;
     var info = {
         openid: req.params.openid,
-        mainSite: config.mainSite
+        mainSite: config.mainSite,
+        message:message
     };
     weixinModel.findOne({ openid: req.params.openid }, function(err, std) {
         if (std) {
             getAll(std.studentId, std.studentPassword, req.params.openid);
-            res.render('main', { info: info, message: message });
+            res.render('main', { info: info });
         } else {
             response.redirect(config.mainSite + ":2000/bind/" + request.params.openid);
 
