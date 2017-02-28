@@ -46,7 +46,8 @@ router.post('/:openid', function(request, response, next) {
                         bindInDB(request.body.id, request.body.password, request.params.openid);
                         getAll(request.body.id, request.body.password, request.params.openid);
 
-                        response.redirect(config.mainSite + ":2000/main/" + request.params.openid);
+                        response.redirect(config.mainSite + ":2000/main/" + request.params.openid + "?message=success");
+
                     }
                 } else {
                     if (!replied) {
@@ -77,7 +78,7 @@ router.post('/:openid', function(request, response, next) {
                         replied = true;
                         bindInDB(request.body.id, request.body.password, request.params.openid);
                         getAll(request.body.id, request.body.password, request.params.openid);
-                        response.redirect(config.mainSite + ":2000/main/" + request.params.openid);
+                        response.redirect(config.mainSite + ":2000/main/" + request.params.openid + "?message=success");
 
                     }
                 } else {
