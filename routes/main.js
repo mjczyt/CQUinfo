@@ -8,6 +8,7 @@ var studentModel = require("./studentModel")
 
 /* GET users listing. */
 router.get('/:openid', function(req, res, next) {
+    var message = req.query.message;
     var info = {
         openid: req.params.openid,
         mainSite: config.mainSite
@@ -15,7 +16,7 @@ router.get('/:openid', function(req, res, next) {
     weixinModel.findOne({ openid: req.params.openid }, function(err, std) {
         if (std) {
             getAll(std.studentId, std.studentPassword, req.params.openid);
-            res.render('main', { info: info });
+            res.render('main', { info: info, message: message });
         } else {
             response.redirect(config.mainSite + ":2000/bind/" + request.params.openid);
 
