@@ -28,7 +28,6 @@ router.get('/:openid', function(req, res, next) {
 });
 
 
-
 function getAll(id, password, openid) {
     var startTime = Date.now();
     var gotAll = false;
@@ -48,7 +47,8 @@ function getAll(id, password, openid) {
                 var schedule = null;
                 var grade = null;
                 var gradeAll = null;
-                if (res.text) {
+
+                if (res && res.text && res.text.indexOf("stuInfo") != -1) {
                     var array = res.text.split("\n");
                     var obj1 = JSON.parse(array[0]);
                     var obj2 = JSON.parse(array[1]);
@@ -107,7 +107,7 @@ function getAll(id, password, openid) {
                 var schedule = null;
                 var grade = null;
                 var gradeAll = null;
-                if (res.text) {
+                if (res && res.text && res.text.indexOf("stuInfo") != -1) {
                     var array = res.text.split("\n");
                     var obj1 = JSON.parse(array[0]);
                     var obj2 = JSON.parse(array[1]);
@@ -126,6 +126,8 @@ function getAll(id, password, openid) {
                             totallInfo = JSON.stringify(obj.totallInfo);
                         }
                     }
+
+
                     studentModel.remove({ openid: openid }, function() {
                         console.log("removed old data of " + id);
                         var classTableArray = schedule.split("|");
